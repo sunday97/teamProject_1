@@ -58,6 +58,7 @@
 .category:not(.active) {
   width: 80%;
   height: 100px;
+  background-color: var(--background-color);
 
   display: flex;
   justify-content: space-around;
@@ -73,6 +74,7 @@
 
 .category.active {
   flex-direction: column;
+  background-color: var(--background-color);
 }
 
 a {
@@ -83,6 +85,15 @@ a {
 a:hover {
   color: var(--main-color);
   font-weight: 600;
+}
+
+/* 메인 사이즈를 넣을 때 참고해주세요 */
+/* header, footer의 각각 height : 100px => 총합 200px을 빼준 값이 메인크기 입니다. */
+.back {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 200px);
+  background: #000000;
 }
 
 /* footer */
@@ -151,18 +162,22 @@ a:hover {
 
   .category.active {
     position: absolute;
-    top: 150px;
+    top: 100px;
     left: 50%;
     transform: translate(-50%, 0%);
 
     width: 100%;
-    padding: 235px 0px 235px 0px;
+    height: calc(100vh - 200px);
+
     text-align: center;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    z-index: 1;
+    background-color: var(--background-color);
   }
 
   .category li {
