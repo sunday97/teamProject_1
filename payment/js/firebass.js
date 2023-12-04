@@ -37,19 +37,18 @@ const db = getFirestore(app);
 
 // 공통부분을 뜯어서 관리한다. 많은 연습 필요 => 중복코드 방지 => 유지보수용의 => 성능 업 => 야근 줄어듬 ㅋ
 
-async function getDatas(collectionName) {
+async function getDatasLogin(collectionName, logInput) {
   const querySnapshot = await getDocs(
-    collection(db, collectionName)
+    collection(db, collectionName),
+    where("id", "==", logInput)
+    // 서버와 대조하여 맞는 값만 가져온다.
     // where("user_id", "==", value)
   );
   return querySnapshot;
 }
-async function getDatasLogin(collectionName, logInput) {
-  const querySnapshot = await getDocs(
-    collection(db, collectionName).where("id", "==", logInput)
-    // 서버와 대조하여 맞는 값만 가져온다.
-    // where("user_id", "==", value)
-  );
+
+async function getDatas(collectionName) {
+  const querySnapshot = await getDocs(collection(db, collectionName));
   return querySnapshot;
 }
 
