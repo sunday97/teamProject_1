@@ -14,6 +14,7 @@ const {
   updateDoc,
   deleteField,
   updatedatas,
+  getId,
 } = firebase;
 
 // Global variable
@@ -181,21 +182,30 @@ function isVaildTel(tel, telinfo) {
 
 function isDup(id) {
   duCheBtn.addEventListener("click", () => {
-    if (idInfo.innerHTML == "좋아요:)") {
-      getUserId(id.value).then((e) => {
-        console.log("Func isDup 안에서 e 값 : " + e);
+    let isExist = 0;
+    getId("user", id.value).then((result) => {
+      isExist = result;
+      if (isExist === 0) {
+        idInfo.style.color = "green";
+        idInfo.innerHTML = "사용가능한 아이디 입니다:)";
+      } else {
+        idInfo.style.color = "red";
+        idInfo.innerHTML = "누군가 사용하고 있어요:(";
+      }
+    });
+    // if (idInfo.innerHTML == "좋아요:)") {
+    //   getUserId(id.value).then((e) => {
+    //     console.log("Func isDup 안에서 e 값 : " + e);
 
-        if (e == false) {
-          idInfo.style.color = "green";
-          idInfo.innerHTML = "사용가능한 아이디 입니다:)";
-        } else {
-          idInfo.style.color = "red";
-          idInfo.innerHTML = "누군가 사용하고 있어요:(";
-        }
-
-        // console.log(id.value);
-      });
-    }
+    //     if (e == false) {
+    //       idInfo.style.color = "green";
+    //       idInfo.innerHTML = "사용가능한 아이디 입니다:)";
+    //     } else {
+    //       idInfo.style.color = "red";
+    //       idInfo.innerHTML = "누군가 사용하고 있어요:(";
+    //     }
+    //   });
+    // }
   });
 }
 
