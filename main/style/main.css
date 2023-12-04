@@ -242,8 +242,8 @@ body {
   top: 0;
   left: 0;
 
-  width: 150px;
-  height: 250px;
+  width: 160px;
+  height: 300px;
 
   animation: blink-effect 0.8s step-end infinite, drop 1s infinite;
 }
@@ -255,14 +255,10 @@ body {
 }
 
 .thunder .thunder-holder:nth-child(1) {
-  top: 5vh;
+  top: -4vh;
   left: 20vw;
 }
 .thunder .thunder-holder:nth-child(2) {
-  top: 48vh;
-  left: 42vw;
-}
-.thunder .thunder-holder:nth-child(3) {
   top: 61vh;
   left: 73vw;
 }
