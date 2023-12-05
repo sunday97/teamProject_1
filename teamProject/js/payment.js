@@ -2,15 +2,18 @@
 
 // global variable
 const cardBox = document.querySelector(".cards");
-const card = document.querySelectorAll(".card");
+let card = document.querySelectorAll(".card");
 const dots = document.querySelectorAll(".fa-ellipsis-vertical");
 const cardMid = document.querySelectorAll(".card-mid");
 const regBtn = document.querySelector(".register");
 
 card.forEach((e) => {
   e.addEventListener("click", function () {
-    card.forEach((e) => {
-      e.classList.remove("selected-card");
+    console.log(e);
+    console.log(card);
+    // 카드클래스 초기화
+    card.forEach((q) => {
+      q.classList.remove("selected-card");
     });
     e.classList.add("selected-card");
     cardBox.insertAdjacentElement("afterbegin", e);
@@ -20,7 +23,7 @@ card.forEach((e) => {
 regBtn.addEventListener("click", () => {
   const names = ["Pay", "우리은행", "KEB Hana Card"];
   const randNum = parseInt(Math.random() * 3 + 1);
-  console.log(randNum);
+  // console.log(randNum);
   cardBox.insertAdjacentHTML(
     "beforeend",
     `<div class="card card${randNum}">
@@ -39,4 +42,5 @@ regBtn.addEventListener("click", () => {
   <div class="card-down card-down3"></div>
 </div>`
   );
+  card = document.querySelectorAll(".card");
 });
