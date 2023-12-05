@@ -7,14 +7,25 @@ const overlay = document.querySelector(".overlay");
 //   overlay.classList.toggle("modal");
 // });
 
-let isModalOpen = false;
+// let isModalOpen = false;
+// function onClick() {
+//   if (isModalOpen) {
+//     isModalOpen = false;
+//     open.classList.remove("modalMain");
+//     overlay.classList.remove("modalMain");
+//   } else {
+//     isModalOpen = true;
+//     open.classList.add("modalMain");
+//     overlay.classList.add("modalMain");
+//   }
+// }
 
 function onClick() {
-  if (isModalOpen) {
+  if (sessionStorage.getItem("aaaa") === false) {
     isModalOpen = false;
     open.classList.remove("modalMain");
     overlay.classList.remove("modalMain");
-  } else {
+  } else if (sessionStorage.getItem("aaaa") === true) {
     isModalOpen = true;
     open.classList.add("modalMain");
     overlay.classList.add("modalMain");

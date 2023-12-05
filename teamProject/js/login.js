@@ -31,7 +31,13 @@ loginBtn.addEventListener("click", function () {
         isVaildPw(idInput, pwInput).then((f) => {
           if (f == true) {
             alert("어서오세요. 우산공유서비스[쓰슈]입니다.");
-            location.replace("main.html");
+            // 세션저장
+            sesionSave(idInput).then(() => {
+              // main으로 이동
+              location.replace("main.html");
+            });
+
+            l;
           } else {
             alert("아이디 또는 비밀번호가 틀렸습니다.");
           }
@@ -78,4 +84,18 @@ async function isVaildPw(a, b) {
   // console.log(idPwObj.pw);
   // console.log(b.value);
   return idPwObj.pw === b.value;
+}
+
+async function sesionSave(id) {
+  const snapshot = await getDatas("user");
+  const arr = [];
+  snapshot.forEach((doc) => {
+    const { email, id, password, name, tel } = doc.data();
+    arr.push({ id: id, pw: password, email: email, name: name, tel: tel });
+  });
+  console.log(arr.find((i) => i.id === id.value));
+  sessionStorage.setItem(
+    id.value,
+    arr.find((i) => i.id === id.value)
+  );
 }

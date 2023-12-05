@@ -75,24 +75,25 @@ reg.addEventListener("click", function () {
       email: userEmail.value,
       tel: userTelBef.value + userTelMid.value + userTelAft.value,
     };
-    addDatas("user", userObj);
-    userId.value = "";
-    userPaw.value = "";
-    userPawChe.value = "";
-    userName.value = "";
-    userEmail.value = "";
-    userTelMid.value = "";
-    userTelAft.value = "";
-    alert("우산대여서비스 '쓰슈'에 오신 걸 환영합니다:)");
-    userId.value = "";
-    userPaw.value = "";
-    userPawChe.value = "";
-    userName.value = "";
-    userEmail.value = "";
-    userTelMid.value = "";
-    userTelAft.value = "";
-    // 메인화면으로 연결
-    location.replace("/main.html");
+    addDatas("user", userObj).then(() => {
+      userId.value = "";
+      userPaw.value = "";
+      userPawChe.value = "";
+      userName.value = "";
+      userEmail.value = "";
+      userTelMid.value = "";
+      userTelAft.value = "";
+      alert("우산대여서비스 '쓰슈'에 오신 걸 환영합니다:)");
+      userId.value = "";
+      userPaw.value = "";
+      userPawChe.value = "";
+      userName.value = "";
+      userEmail.value = "";
+      userTelMid.value = "";
+      userTelAft.value = "";
+      // 메인화면으로 연결
+      location.replace("/main.html");
+    });
   } else {
     alert("잘못된 형식이 들어있어요! 다시 확인해주세요.");
   }

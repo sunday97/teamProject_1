@@ -195,12 +195,12 @@ input {
   position: relative;
 }
 
-.modal-box::after {
+/* .modal-box::after {
   content: "영어대소문자,특수문자(!@#$%^*+=-),숫자(0-9)의 8이상 15이하";
   position: absolute;
   font-size: 12px;
   bottom: 58px;
-}
+} */
 .changeBtnInfo {
   position: absolute;
   top: 20px;
@@ -209,7 +209,7 @@ input {
 }
 
 #changePw {
-  width: 300px;
+  width: 400px;
 }
 .changeBtn {
   align-self: self-start;
