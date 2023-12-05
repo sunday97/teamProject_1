@@ -353,7 +353,10 @@ body {
 .badge .qr-img {
   width: 360px;
   height: 650px;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 11a2a1631356b9a66adc7e8d8ec159ab62fbc02a
   box-shadow: 4px 6px 6px rgba(0, 0, 0, 0.6);
 
   position: fixed;
