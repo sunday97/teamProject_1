@@ -101,160 +101,241 @@ a:hover {
   font-weight: 600;
 }
 
-.category li:nth-child(5) a {
+.category li:first-child a {
   color: #76f1a7;
   font-weight: 600;
 }
-.main_pay {
+
+/* 위쪽 service guide  */
+
+.serviceGuide {
   display: flex;
+  align-items: center;
   flex-direction: column;
-  width: 100%;
-  max-width: 648px;
-  margin: 0px auto;
-  padding: 20px;
-  gap: 24px;
-}
-.title {
-  font-size: 40px;
-  text-align: center;
+  gap: 2rem;
   padding-top: 100px;
-  padding-bottom: 30px;
-}
-.cards {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  padding-bottom: 100px;
 }
 
-.card {
+.guideTitle {
+  font-size: 40px;
+}
+
+.serviceGuide p {
+  text-align: center;
+}
+
+/* 날씨 이미지와 현재위치 */
+
+/* .weatherWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 300px;
+} */
+
+.weather {
   width: 100%;
-  /* background-color: #fcec4e; */
+  height: 550px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("/img/raindrops.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.city,
+.temp,
+.cloud,
+.tempC {
+  color: rgb(255, 255, 255, 0.8);
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 65px;
+}
+
+.temp,
+.tempC {
+  display: inline;
+}
+
+.icon {
+  /* width: 200px; */
+  height: 200px;
+}
+
+/* 환경문제 */
+
+.eco {
   display: flex;
   flex-direction: column;
-  /* padding: 20px; */
-  border-radius: 20px;
-  /* overflow: hidden; */
-  /* position: relative; */
+  align-items: center;
+  gap: 5rem;
 }
-.selected-card {
-  box-shadow: 0px 0px 4px 4px red;
+
+.ecoContent {
+  padding-top: 200px;
+  font-size: 24px;
 }
-.card.card1 {
-  background-color: #fcec4e;
-  transition: all 0.15s linear;
+
+.ecoBox {
+  display: flex;
+  gap: 2rem;
 }
-.card.card1:hover {
-  transform: scale(1.1);
+
+.ecoBoxContent {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  gap: 1rem;
 }
-.card.card2 {
-  background-color: #3e8c7f;
-  color: white;
-  transition: all 0.15s linear;
-}
-.card.card2:hover {
-  transform: scale(1.1);
-}
-.card.card3 {
-  background-color: #2b66b1;
-  color: white;
-  transition: all 0.15s linear;
-}
-.card.card3:hover {
-  transform: scale(1.1);
-}
-.card-up {
+
+.umbrella {
+  font-weight: bold;
   position: relative;
-  margin: 36px;
+}
+
+.umbrellaLine {
+  position: absolute;
+  width: 370px;
+  height: 18px;
+  background-color: #73eeba;
+  left: -10px;
+  top: 13px;
+  z-index: -999;
+}
+
+.ecoNum {
+  color: #ccc;
+}
+
+/* 이용방법 */
+
+.useContent {
+  padding-top: 200px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-}
-.card-up .card-title {
-  font-size: 30px;
-  font-weight: 700;
-  display: flex;
   align-items: center;
-}
-.card-up .card-title > img {
-  width: 29px;
-  height: 27px;
-}
-.card-up .fa-ellipsis-vertical {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  transform: translate(50%, 50%);
-  font-size: 30px;
+  gap: 2rem;
 }
 
-.card-hover {
-  width: 240px;
-  height: 100px;
+.contentHeader {
+  text-align: center;
+  font-size: 24px;
+}
+
+.logoContent {
+  color: #73eeba;
+}
+
+.mainContent {
+  text-align: center;
   font-size: 20px;
-  font-weight: 600;
-  background-color: white;
-  color: #303030;
-  padding: 20px;
-  border-radius: 12px;
-  position: absolute;
-  top: -100%;
-  right: -100%;
-  opacity: 0;
-  /* display: none; */
-  /* visibility: hidden; */
+}
+
+/* 대여, 반납 */
+
+.howToUse {
+  padding-top: 100px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.25s linear;
-  box-shadow: 0 0 10px 8px rgba(0, 0, 0, 0.25);
-  pointer-events: none;
-}
-
-.card-up .fa-ellipsis-vertical:hover .card-hover {
-  opacity: 1;
-  pointer-events: auto;
-  /* display: block; */
-  /* visibility: visible; */
-}
-
-/* .card-mid {
-    font-size: 20px;
-    font-weight: 600;
-    background-color: white;
-    color: #303030;
-    padding: 20px;
-    border-radius: 12px;
-    position: absolute;
-    top: 34%;
-    right: 15%;
-    opacity: 0;
-    transition: all 0.3s linear;
-  } */
-
-/* .card-mid-active {
-    opacity: 1;
-  } */
-
-.register {
   width: 100%;
-  height: 50px;
-  background-color: #303030;
-  color: white;
+}
+
+.howToUseWrapper {
+  padding-left: 1rem;
+  flex-grow: 1;
+}
+
+.rentWrapper,
+.returnWrapper {
   display: flex;
+  flex-grow: 1;
+  gap: 1rem;
+}
+
+.returnWrapper {
+  padding-right: 1rem;
+}
+
+.rent,
+.return {
+  width: 450px;
+  height: 600px;
+  background-color: #83e1c4;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  transition: all 0.1s linear;
-  cursor: pointer;
-  gap: 0.5rem;
+  flex-grow: 1;
+  padding: 4rem;
+  border-radius: 2rem;
+  box-shadow: 5px 1px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
-.register:hover {
-  background-color: #fff;
-  border: 1px solid black;
-  color: #76f1a7;
+
+.rent p,
+.return p {
+  font-weight: bold;
+  font-size: 24px;
+  width: fit-content;
+  padding: 0 1rem;
+  text-align: center;
 }
-.register:active {
-  box-shadow: inset 0 0 4px 2px rgba(0, 0, 0, 0.3);
+
+.useImg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
+.btn {
+  padding: 1rem 5rem;
+  margin-bottom: 1rem;
+  border-radius: 3rem;
+  border: 0;
+  box-shadow: 5px 1px 8px rgba(0, 0, 0, 0.2);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.btn.rentBtn {
+  background-color: black;
+  color: snow;
+}
+
+.btn.returnBtn {
+  background-color: snow;
+}
+
+/* 탄소절감 content */
+
+.carbonContent {
+  padding-top: 100px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.carbon {
+  position: relative;
+  font-weight: bold;
+}
+
+.carbonLine {
+  position: absolute;
+  width: 115px;
+  height: 18px;
+  background-color: #73eeba;
+  left: -10px;
+  top: 13px;
+  z-index: -999;
+}
+
 /* footer */
 .footer {
   border-top: 2px solid var(--serve-color);
@@ -285,6 +366,7 @@ a:hover {
   text-align: center;
   font-size: 12px;
 }
+
 @media screen and (max-width: 1080px) {
   .category:not(.active) {
     width: 80%;
@@ -296,7 +378,7 @@ a:hover {
 
     position: absolute;
     right: 0;
-    top: 10px;
+    top: 0;
 
     padding-left: 20px;
     padding-right: 20px;
@@ -306,6 +388,12 @@ a:hover {
     font-size: 26px;
     letter-spacing: 0.5px;
     color: var(--text-color);
+  }
+  .howToUse {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* align-items: center; */
   }
 }
 @media screen and (max-width: 960px) {
@@ -337,6 +425,7 @@ a:hover {
 
     z-index: 1;
     background-color: var(--background-color);
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
   }
 
   .category li {
@@ -359,7 +448,25 @@ a:hover {
     justify-content: center;
     align-items: center;
 
-    /* position: absolute;
-    bottom: 0; */
+    /* position: absolute; */
+    /* bottom: 0; */
+  }
+
+  /* 대여, 반납 반응형 */
+  .howToUse {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rentWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /*  */
+  .ecoBox {
+    display: flex;
+    flex-direction: column;
   }
 }

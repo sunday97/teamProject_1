@@ -20,6 +20,9 @@
   --background-color: #ffffff;
 }
 
+body {
+  overflow-x: hidden;
+}
 a {
   text-decoration: none;
   cursor: pointer;
@@ -244,18 +247,18 @@ a:hover {
 .howToUse {
   padding-top: 100px;
   display: flex;
-  width: 100%;
+  width: 100vw;
+  margin: 0 100px;
 }
 
 .howToUseWrapper {
   padding-left: 1rem;
-  flex-grow: 1;
+  /* flex-grow: 1; */
 }
 
 .rentWrapper,
 .returnWrapper {
   display: flex;
-  flex-grow: 1;
   gap: 1rem;
 }
 
@@ -265,7 +268,7 @@ a:hover {
 
 .rent,
 .return {
-  width: 450px;
+  width: 400px;
   height: 600px;
   background-color: #83e1c4;
   display: flex;

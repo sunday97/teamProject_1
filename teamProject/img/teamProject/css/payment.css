@@ -245,7 +245,6 @@ a:hover {
   justify-content: center;
   transition: all 0.1s linear;
   cursor: pointer;
-  gap: 0.5rem;
 }
 .register:hover {
   background-color: #fff;

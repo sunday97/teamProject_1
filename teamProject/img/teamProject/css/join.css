@@ -2,7 +2,11 @@
   font-family: "AppleSDGothicNeo";
   src: url("/font/AppleSDGothicNeoR.ttf");
 }
-
+.custom-button {
+  background-color: #76f1a7; /* 원하는 배경 색상으로 변경하세요 */
+  /* 텍스트 색상을 조절하세요 */
+  /* 추가적인 스타일을 필요에 따라 지정하세요 */
+}
 * {
   padding: 0;
   margin: 0;
@@ -101,151 +105,132 @@ a:hover {
   font-weight: 600;
 }
 
-.category li:nth-child(5) a {
+.category li:nth-child(4) a {
   color: #76f1a7;
   font-weight: 600;
 }
-.main_pay {
+
+main {
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 648px;
-  margin: 0px auto;
-  padding: 20px;
+  margin: 0 auto;
+  padding: 0 20px;
   gap: 24px;
 }
-.title {
-  font-size: 40px;
-  text-align: center;
-  padding-top: 100px;
-  padding-bottom: 30px;
-}
-.cards {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+
+main * {
+  width: 100%;
 }
 
-.card {
-  width: 100%;
-  /* background-color: #fcec4e; */
+.title {
+  margin: 24px 0;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  padding-top: 65px;
+}
+textarea {
+  white-space: pre-line;
+  line-height: 1.5;
+  padding-left: 10px;
+}
+.terms-item {
   display: flex;
   flex-direction: column;
-  /* padding: 20px; */
-  border-radius: 20px;
-  /* overflow: hidden; */
-  /* position: relative; */
+  gap: 4px;
 }
-.selected-card {
-  box-shadow: 0px 0px 4px 4px red;
+
+.terms-checkboxs {
+  width: fit-content;
+  align-self: flex-end;
 }
-.card.card1 {
-  background-color: #fcec4e;
-  transition: all 0.15s linear;
+.terms-checkbox-label {
+  width: fit-content;
 }
-.card.card1:hover {
-  transform: scale(1.1);
+#terms-checkbox {
+  width: 13px;
 }
-.card.card2 {
-  background-color: #3e8c7f;
-  color: white;
-  transition: all 0.15s linear;
-}
-.card.card2:hover {
-  transform: scale(1.1);
-}
-.card.card3 {
-  background-color: #2b66b1;
-  color: white;
-  transition: all 0.15s linear;
-}
-.card.card3:hover {
-  transform: scale(1.1);
-}
-.card-up {
-  position: relative;
-  margin: 36px;
+
+.form {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-.card-up .card-title {
-  font-size: 30px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-}
-.card-up .card-title > img {
-  width: 29px;
-  height: 27px;
-}
-.card-up .fa-ellipsis-vertical {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  transform: translate(50%, 50%);
-  font-size: 30px;
-}
-
-.card-hover {
-  width: 240px;
-  height: 100px;
+.form label {
   font-size: 20px;
-  font-weight: 600;
-  background-color: white;
-  color: #303030;
-  padding: 20px;
-  border-radius: 12px;
+}
+.form input {
+  height: 40px;
+}
+.sec {
+  position: relative;
+}
+.id-dup-che-btn {
+  width: fit-content;
+  padding: 2px;
+  border: 1px solid #303030;
+  border-radius: 3px;
+
   position: absolute;
-  top: -100%;
-  right: -100%;
-  opacity: 0;
-  /* display: none; */
-  /* visibility: hidden; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.25s linear;
-  box-shadow: 0 0 10px 8px rgba(0, 0, 0, 0.25);
-  pointer-events: none;
+  right: 0;
+  top: -5%;
+}
+.id-dup-che-btn:active {
+  box-shadow: inset 0 0 4px 2px rgba(0, 0, 0, 0.3);
 }
 
-.card-up .fa-ellipsis-vertical:hover .card-hover {
-  opacity: 1;
-  pointer-events: auto;
-  /* display: block; */
-  /* visibility: visible; */
+.input-info {
+  width: 200px;
+  text-align: end;
+  position: absolute;
+  top: 100%;
+  left: 67%;
+  font-size: 12px;
+  font-weight: 600;
+  color: red;
+}
+.mid-tel-info {
+  width: 100px;
+  left: 13%;
+}
+.aft-tel-info {
+  width: 100px;
+  left: 29%;
 }
 
-/* .card-mid {
-    font-size: 20px;
-    font-weight: 600;
-    background-color: white;
-    color: #303030;
-    padding: 20px;
-    border-radius: 12px;
-    position: absolute;
-    top: 34%;
-    right: 15%;
-    opacity: 0;
-    transition: all 0.3s linear;
-  } */
+.user-tel span {
+  font-size: 20px;
+}
+.user-tel select {
+  width: 80px;
+  height: 30px;
+  text-align: center;
+}
+.user-tel input {
+  height: 17px;
+  width: 80px;
+  height: 30px;
+  text-align: center;
+}
 
-/* .card-mid-active {
-    opacity: 1;
-  } */
-
+.join-info {
+  font-size: 12px;
+  height: 35px;
+  /* overflow: scroll; */
+}
 .register {
-  width: 100%;
-  height: 50px;
+  font-weight: bold;
   background-color: #303030;
-  color: white;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
+  margin-bottom: 20px;
   transition: all 0.1s linear;
   cursor: pointer;
-  gap: 0.5rem;
 }
 .register:hover {
   background-color: #fff;
@@ -284,29 +269,6 @@ a:hover {
 .footer p {
   text-align: center;
   font-size: 12px;
-}
-@media screen and (max-width: 1080px) {
-  .category:not(.active) {
-    width: 80%;
-    height: 80px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    position: absolute;
-    right: 0;
-    top: 10px;
-
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  a {
-    font-size: 26px;
-    letter-spacing: 0.5px;
-    color: var(--text-color);
-  }
 }
 @media screen and (max-width: 960px) {
   .logo-bar .hamburger {
