@@ -100,7 +100,7 @@ a {
   letter-spacing: 2px;
   color: var(--text-color);
 }
-a:hover {
+.category li a:hover {
   color: var(--main-color);
   font-weight: 600;
 }
@@ -259,25 +259,23 @@ ul {
   display: flex;
   list-style: none;
   align-items: center;
+  justify-content: center;
   width: 400px;
   height: 120px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
+  gap: 2rem;
 }
 
 .icon-list li {
   display: flex;
   flex-wrap: wrap;
-  padding-left: 20px;
+  font-size: 20px;
 }
 
 .m-list {
   display: flex;
   flex-direction: column;
-}
-
-.icon-list svg {
-  padding-left: 20px;
 }
 
 .container_map {
@@ -390,6 +388,7 @@ ul {
 .modal_img {
   width: 300px;
   height: 200px;
+  object-fit: cover;
 }
 
 .list {
@@ -403,6 +402,9 @@ ul {
 
 .list li {
   margin-bottom: 10px;
+}
+
+.list li span {
   font-weight: bold;
 }
 

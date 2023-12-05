@@ -96,11 +96,10 @@ a {
   letter-spacing: 2px;
   color: var(--text-color);
 }
-a:hover {
+.category li a:hover {
   color: var(--main-color);
   font-weight: 600;
 }
-
 .category li:nth-child(5) a {
   color: #76f1a7;
   font-weight: 600;
