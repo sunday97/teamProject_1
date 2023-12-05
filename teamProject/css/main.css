@@ -402,9 +402,9 @@ body {
   filter: brightness(70%);
   transition: all 0.1s ease;
 }
-.badge .exit-box:hover .fa-xmark {
-  color: ;
-}
+/* .badge .exit-box:hover .fa-xmark {
+
+} */
 /* 액티브 되었을 때 있어도 되고 없어도 될 것 같아요. */
 .badge .exit-box:active {
   box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.7);
