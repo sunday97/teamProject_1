@@ -2,6 +2,8 @@ const badge = document.querySelector(".qr-icon");
 const open = document.querySelector(".qr-img");
 const overlay = document.querySelector(".overlay");
 
+const exit = document.querySelector(".exit-box");
+
 // badge.addEventListener("click", function () {
 //   open.classList.toggle("modal");
 //   overlay.classList.toggle("modal");
@@ -20,8 +22,14 @@ const overlay = document.querySelector(".overlay");
 //   }
 // }
 
+exit.addEventListener("click", () => {
+  sessionStorage.clear();
+  location.replace("main.html");
+});
+
 if (sessionStorage.getItem("login")) {
   let isModalOpen = false;
+  exit.classList.add("active");
   function onClick() {
     if (isModalOpen) {
       isModalOpen = false;
