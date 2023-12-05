@@ -245,25 +245,14 @@ a {
 /* 대여, 반납 */
 
 .howToUse {
-  padding-top: 100px;
-  display: flex;
-  width: 100vw;
-  margin: 0 100px;
-}
-
-.howToUseWrapper {
-  padding-left: 1rem;
-  /* flex-grow: 1; */
-}
-
-.rentWrapper,
-.returnWrapper {
   display: flex;
   gap: 1rem;
+  margin: 0 100px;
+  padding-top: 200px;
 }
 
-.returnWrapper {
-  padding-right: 1rem;
+.BtnHold {
+  position: relative;
 }
 
 .rent,
@@ -305,6 +294,9 @@ a {
   box-shadow: 5px 1px 8px rgba(0, 0, 0, 0.2);
   font-size: 24px;
   font-weight: bold;
+  position: absolute;
+  top: -80px;
+  left: 0;
 }
 
 .btn.rentBtn {
@@ -393,10 +385,17 @@ a {
     color: var(--text-color);
   }
   .howToUse {
-    display: flex;
     flex-direction: column;
-    gap: 1rem;
-    /* align-items: center; */
+    align-items: center;
+  }
+
+  .rent,
+  .return {
+    width: 700px;
+  }
+
+  .return {
+    margin-top: 100px;
   }
 }
 @media screen and (max-width: 960px) {
@@ -457,14 +456,17 @@ a {
 
   /* 대여, 반납 반응형 */
   .howToUse {
-    display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .rentWrapper {
-    display: flex;
-    flex-direction: column;
+  .rent,
+  .return {
+    width: 400px;
+  }
+
+  .return {
+    margin-top: 100px;
   }
 
   /*  */
