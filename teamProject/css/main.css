@@ -377,8 +377,6 @@ body {
   position: absolute;
   bottom: 190px;
   right: 42px;
-  background-color: white;
-  box-shadow: inset 0 0 3px 3px var(--main);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -392,9 +390,11 @@ body {
   opacity: 1;
   pointer-events: auto;
 }
-.badge .exit-box .fa-xmark {
-  font-size: 40px;
-  font-weight: 900;
+
+.exit-box img {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
 .badge .exit-box:hover {
@@ -405,8 +405,9 @@ body {
 .badge .exit-box:hover .fa-xmark {
   color: var(--text);
 }
+/* 액티브 되었을 때 있어도 되고 없어도 될 것 같아요. */
 .badge .exit-box:active {
-  box-shadow: inset 0 0 3px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.7);
 }
 
 .overlay {

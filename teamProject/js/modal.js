@@ -22,6 +22,16 @@ const exit = document.querySelector(".exit-box");
 //   }
 // }
 
+exit.addEventListener("mouseover", () => {
+  console.log("in");
+  exit.innerHTML = `<img src="./img/logout_2.png" alt="로그아웃아이콘2" />`;
+});
+
+exit.addEventListener("mouseout", () => {
+  console.log("out");
+  exit.innerHTML = `<img src="./img/logout_1.png" alt="로그아웃아이콘1" />`;
+});
+
 exit.addEventListener("click", () => {
   sessionStorage.clear();
   location.replace("main.html");
