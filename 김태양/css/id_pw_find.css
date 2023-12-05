@@ -95,6 +95,20 @@ input {
   padding: 20px;
   background-color: white;
   border-radius: 8px;
+  position: relative;
+}
+/* 추가제거 의논 */
+.modal-box::after {
+  content: "영어대소문자,특수문자(!@#$%^*+=-),숫자(0-9)의 8이상 15이하";
+  position: absolute;
+  font-size: 12px;
+  bottom: 58px;
+}
+.changeBtnInfo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 12px;
 }
 
 #changePw {
