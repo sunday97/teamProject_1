@@ -20,14 +20,21 @@ const overlay = document.querySelector(".overlay");
 //   }
 // }
 
-function onClick() {
-  if (sessionStorage.getItem("aaaa") === false) {
-    isModalOpen = false;
-    open.classList.remove("modalMain");
-    overlay.classList.remove("modalMain");
-  } else if (sessionStorage.getItem("aaaa") === true) {
-    isModalOpen = true;
-    open.classList.add("modalMain");
-    overlay.classList.add("modalMain");
+if (sessionStorage.getItem("login")) {
+  let isModalOpen = false;
+  function onClick() {
+    if (isModalOpen) {
+      isModalOpen = false;
+      open.classList.remove("modalMain");
+      overlay.classList.remove("modalMain");
+    } else {
+      isModalOpen = true;
+      open.classList.add("modalMain");
+      overlay.classList.add("modalMain");
+    }
   }
+} else {
+  badge.addEventListener("click", () => {
+    alert("로그인해주세요!");
+  });
 }

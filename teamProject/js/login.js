@@ -95,7 +95,7 @@ async function sesionSave(id) {
   });
   console.log(arr.find((i) => i.id === id.value));
   sessionStorage.setItem(
-    id.value,
+    "login",
     arr.find((i) => i.id === id.value)
   );
 }
