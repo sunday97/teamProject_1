@@ -13,6 +13,10 @@
   color: #303030;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 :root {
   --text-color: #303030;
   --serve-color: #ccc;
@@ -116,7 +120,7 @@ a {
 .title {
   font-size: 40px;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 80px;
   padding-bottom: 30px;
 }
 .cards {
