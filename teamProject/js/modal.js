@@ -34,7 +34,7 @@ exit.addEventListener("mouseout", () => {
 
 exit.addEventListener("click", () => {
   sessionStorage.clear();
-  location.replace("main.html");
+  location.replace("index.html");
 });
 
 if (sessionStorage.getItem("login")) {

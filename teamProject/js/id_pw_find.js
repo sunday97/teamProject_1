@@ -204,7 +204,7 @@ modalChangeBtn.addEventListener("click", () => {
     changePw("user", pwSearchIdInput);
     alert("비밀번호가 변경되었습니다.");
     // 비밀번호가 성공적으로 변경되면 홈으로 이동하는 부분
-    location.replace("main.html");
+    location.replace("index.html");
   } else {
     alert("잘못된 형식입니다:(");
   }

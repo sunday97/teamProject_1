@@ -92,7 +92,7 @@ reg.addEventListener("click", function () {
       userTelMid.value = "";
       userTelAft.value = "";
       // 메인화면으로 연결
-      location.replace("/main.html");
+      location.replace("/index.html");
     });
   } else {
     alert("잘못된 형식이 들어있어요! 다시 확인해주세요.");

@@ -34,7 +34,7 @@ loginBtn.addEventListener("click", function () {
             // 세션저장
             sesionSave(idInput).then(() => {
               // main으로 이동
-              location.replace("main.html");
+              location.replace("index.html");
             });
 
             l;
