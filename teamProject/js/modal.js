@@ -54,5 +54,6 @@ if (sessionStorage.getItem("login")) {
 } else {
   badge.addEventListener("click", () => {
     alert("로그인해주세요!");
+    location.replace("login.html");
   });
 }
