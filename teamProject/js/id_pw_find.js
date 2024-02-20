@@ -59,6 +59,8 @@ isVaildPw(changePwInput);
 async function showIdByNameAndEamil(Name, Email) {
   const snapshot = await getDatas("user");
   const arr = [];
+  // console.log(Name.value);
+  // console.log(Email.value);
   snapshot.forEach((doc) => {
     const { email, id, password, name, tel } = doc.data();
     arr.push({ id: id, pw: password, name: name, tel: tel, email: email });
@@ -95,13 +97,14 @@ async function showIdByNameAndEamil(Name, Email) {
 async function showIdByNameAndTel(Name, Email) {
   const snapshot = await getDatas("user");
   const arr = [];
+  console.log("이메일찾기");
   snapshot.forEach((doc) => {
     const { email, id, password, name, tel } = doc.data();
     arr.push({ id: id, pw: password, name: name, tel: tel, email: email });
   });
   console.log(arr);
   console.log(arr.find((obj) => obj.name === Name.value));
-  console.log(arr.find((obj) => obj.tel == Email.value));
+  console.log(arr.find((obj) => obj.tel === Email.value));
   // console.log(arr.find((obj) => obj.tel == Email.value)["id"]);
 
   if (
@@ -111,7 +114,7 @@ async function showIdByNameAndTel(Name, Email) {
     alert("잘못된 입력입니다.");
   } else {
     if (
-      // 전화번호가 고유한 넘버가 될 수 있는가? 일단 ok
+      // 전화번호가 고유한 넘버가 될 수 있는가?
       arr.find((obj) => obj.name === Name.value) ===
       arr.find((obj) => obj.tel === Email.value)
     ) {
@@ -119,12 +122,12 @@ async function showIdByNameAndTel(Name, Email) {
         `아이디는 ${arr.find((obj) => obj.name === Name.value).id} 입니다.`
       );
     } else if (
-      rr.find((obj) => obj.name === Name.value) !==
+      arr.find((obj) => obj.name === Name.value) !==
       arr.find((obj) => obj.tel === Email.value)
     ) {
       alert("잘못된 입력입니다.");
     } else {
-      lert("잘못된 입력입니다.");
+      alert("잘못된 입력입니다.");
     }
   }
 }
