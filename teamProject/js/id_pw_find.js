@@ -172,15 +172,13 @@ async function changePw(collectionName, userId) {
   const snapshot = await getDocs(
     query(collection(db, collectionName), where("id", "==", userId.value))
   );
-  console.log(snapshot);
-  // QuerySnapshot  vs QueryDocumentSnapshot ....
-  // QueryDocumentSnapshot로 뽑고 싶은데 방법을 forEach밖에 몰라서 강제로 이렇게 씀, 나중에 알면 수정하면 좋을듯..
+
   snapshot.forEach((e) => {
     // 문서아이디
     console.log(typeof e.id);
     docID = e.id;
   });
-  // console.log(getDoc(doc(db, "user", docID)));
+
   const obj = {
     password: changePwInput.value,
   };
